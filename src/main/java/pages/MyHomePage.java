@@ -30,4 +30,11 @@ public class MyHomePage extends OpentapsWrappers {
 		return new CreateLeadPage();
 
 	}
+	public OpportunitiesPage navigateToOpportunitiesPage() {
+		  clickByLink(prop.getProperty("MenuPage.Oppurtunities.LinkText"));
+		  return new OpportunitiesPage();
+		  
+	  }
+	
+
 }
