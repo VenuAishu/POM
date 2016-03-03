@@ -27,7 +27,7 @@ public class TC005CreateContact extends OpentapsWrappers {
 		.enterFirstName(firstName)
 		.enterLastName(lastName)
 		.clikckCreateContact()
-		.verifyContactName(firstName);
+		.verifyContactFullName(firstName);
 	}
 
 }

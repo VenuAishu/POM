@@ -247,6 +247,19 @@ public class GenericWrappers {
 		}
 		return bReturn;
 	}
+	public boolean clickByPartialLink(String name) {
+		boolean bReturn = false;
+		try{
+			driver.findElement(By.partialLinkText(name)).click();
+			Reporter.reportStep("The element with link name: "+name+" is clicked.", "PASS");
+
+			bReturn = true;
+
+		} catch (Exception e) {
+			Reporter.reportStep("The element with link name: "+name+" could not be clicked.", "FAIL");
+		}
+		return bReturn;
+	}
 
 	/**
 	 * This method will click the element using xpath as locator

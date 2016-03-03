@@ -21,4 +21,8 @@ public class FindContactsPage extends OpentapsWrappers {
 		clickByXpath(prop.getProperty("FindContact.FindContactsButton.Name"));
 		return this;		
 	}
+	public ViewContactPage clickContactsFirstName(String firstName){
+		clickByPartialLink(firstName);
+		return new ViewContactPage();		
+	}
 }
