@@ -12,7 +12,7 @@ public class TC005CreateContact extends OpentapsWrappers {
 		browserName 	= "firefox";
 		dataSheetName 	= "TC005_CreateContacts";
 		testCaseName 	= "TC05 - Create Contact (POM)";
-		testDescription = "Create in Opentaps using POM framework";
+		testDescription = "Create Contact in Opentaps using POM framework";
 	}
 	@Test(dataProvider="fetchData")
 	public void startTestCase(String username,String password,String loginName,String firstName,String lastName){
@@ -26,7 +26,7 @@ public class TC005CreateContact extends OpentapsWrappers {
 		.navigateToCreateContact()
 		.enterFirstName(firstName)
 		.enterLastName(lastName)
-		.clikckCreateContact()
+		.clickCreateContact()
 		.verifyContactFullName(firstName);
 	}
 

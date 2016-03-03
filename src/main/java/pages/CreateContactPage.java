@@ -19,10 +19,10 @@ public class CreateContactPage extends OpentapsWrappers {
 		return this;
 		
 	}
-	public ViewContactPage clikckCreateContact(){
+	public ViewContactPage clickCreateContact(){
 		clickByName(prop.getProperty("CreateContact.CreatContactButton.Name"));
 		return new ViewContactPage();
 		
 	}
-	
+
 }

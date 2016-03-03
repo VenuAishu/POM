@@ -327,6 +327,15 @@ public class GenericWrappers {
 		}
 		return bReturn; 
 	}
+	public String getTextByClass(String classVal){
+		String bReturn = "";
+		try{
+			return driver.findElement(By.className(classVal)).getText();
+		} catch (Exception e) {
+			Reporter.reportStep("The element with xpath: "+classVal+" could not be found.", "FAIL");
+		}
+		return bReturn; 
+	}
 
 	/**
 	 * This method will select the drop down value using id as locator
